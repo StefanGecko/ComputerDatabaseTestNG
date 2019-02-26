@@ -24,7 +24,10 @@ public class BasePage {
     }
 
 
-    // getElement Wrappers with wait function that will be used when locating elements.
+    /**
+     * Wrappers used for locating web elements
+     * @param by
+     */
     protected WebElement getElement(By by)
     {
         try
@@ -51,7 +54,10 @@ public class BasePage {
         return null;
     }
 
-    //**********Date format**************
+    /**
+     * date formater and methods for date generation to be used in the automation process
+     *
+     */
     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     Date currentDate = new Date();
     Calendar cal = Calendar.getInstance();

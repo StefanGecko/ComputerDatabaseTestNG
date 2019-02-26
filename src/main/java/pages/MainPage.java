@@ -16,18 +16,24 @@ public class MainPage extends BasePage {
         super(driver, wait);
     }
 
-    //***********Test Data*********
+    /**
+     * Test data from properties file.
+     */
     PropertiesFile properties = new PropertiesFile();
     String invalidIntroducedDate = properties.getPropertyValue(PropertiesFile.PropertyKey.INVALID_INTRODUCED_DATE);
     String invalidDiscontinuedDate = properties.getPropertyValue(PropertiesFile.PropertyKey.INVALID_DISCONTINUED_DATE);
     String computerName = properties.getPropertyValue(PropertiesFile.PropertyKey.LENOVO_COMPUTER_NAME);
 
-    //*************PAGE INSTANTIATIONS*************
+    /**
+     * Page instances for actions that are going to be used.
+     */
     public Button button = new Button(driver, wait);
     public Validate validate = new Validate(driver, wait);
     public Input input = new Input(driver, wait);
 
-    //*********Web Elements*********
+    /**
+     * Web Elements
+     */
     private By filterCompName = By.id("searchbox");
     private By filterBtn = By.id("searchsubmit");
     private By filteredComp = By.cssSelector(".computers > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(1) > a:nth-child(1)");
@@ -38,7 +44,9 @@ public class MainPage extends BasePage {
     private By blankNamefield = By.className("help-inline");
 
 
-    //*********Page Methods*********
+    /**
+     * Page methods
+     */
     public void filterByComputerName(){
 
         input.clear(filterCompName);

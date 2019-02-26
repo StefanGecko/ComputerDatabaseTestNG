@@ -17,7 +17,9 @@ public class AddPage extends BasePage {
         super(driver, wait);
     }
 
-    //***********Test Data*********
+    /**
+     * Test data imported from property file
+     */
     PropertiesFile properties = new PropertiesFile();
     String invalidDateFormat = properties.getPropertyValue(PropertiesFile.PropertyKey.INVALID_DATE_FORMAT);
     String invalidIntroducedDate = properties.getPropertyValue(PropertiesFile.PropertyKey.INVALID_INTRODUCED_DATE);
@@ -27,14 +29,18 @@ public class AddPage extends BasePage {
     String invalidComputerName = properties.getPropertyValue(PropertiesFile.PropertyKey.INVALID_COMPUTER_NAME);
 
 
-
-    //*************PAGE INSTANTIATIONS*************
+    /**
+     * Page instances for actions that are going to be used.
+     */
     public Button button = new Button(driver, wait);
     public Validate validate = new Validate(driver, wait);
     public Input input = new Input(driver, wait);
     public Dropdown dropdown = new Dropdown(driver, wait);
 
-    //*********Web Elements*********
+    /**
+     * Web element locators
+     */
+
     By computerNameInput = By.id("name");
     By introducedDate = By.id("introduced");
     By discontinuitedDate = By.id("discontinued");
@@ -43,7 +49,9 @@ public class AddPage extends BasePage {
     By cancelButton = By.linkText("Cancel");
     By computerNameAlert = By.className("help-inline");
 
-    //*********Page Methods*********
+    /**
+     * Page methods used for testing
+     */
     public void createNewComputer(){
 
         validate.isElementPresent(computerNameInput);

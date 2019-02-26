@@ -14,18 +14,25 @@ public class HomePage extends BasePage {
         super(driver, wait);
     }
 
+    /**
+     * Page instances for actions that are going to be used.
+     */
     public Button button = new Button(driver, wait);
     public Validate validate = new Validate(driver, wait);
     public Input input = new Input(driver, wait);
 
 
-    //********Page Elements**********
+    /**
+     * Web element locators
+     */
     By pageTitle = By.className("fill");
     By mainTable = By.className("computers");
 
 
 
-    //*********Page Methods*********
+    /**
+     * Page Methods
+     */
 
     public void validateHomePage(){
         validate.textContains(pageTitle, "Computer database");
