@@ -1,6 +1,6 @@
 package pages;
 
-import Utilities.PropertiesFile;
+import utilities.PropertiesFile;
 import common.elementActions.Button;
 import common.elementActions.Dropdown;
 import common.elementActions.Input;
