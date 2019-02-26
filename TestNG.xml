@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Computer Database Test Suite" >
+<listeners>
+    <listener class-name="utils.Listeners.TestListener"/>
+    <listener class-name="utils.Listeners.AnnotationTransformer"/>
+</listeners>
+
+<test name="Computer Database Tests" preserve-order="true">
+    <classes>
+        <class name="tests.CreateComputerTests"/>
+        <class name="tests.EditComputerTests"/>
+        <class name="tests.RemoveComputersTests"/>
+        <class name="tests.FilterComputerTests"/>
+    </classes>
+</test>
+</suite>
