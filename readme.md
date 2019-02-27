@@ -47,8 +47,8 @@ Open your favorite Terminal and run these commands.
 
 Command for execution:
 ```sh
-CHROME BROWSER - mvn clean -Dtest=RunnersScenarioStepDefinition verify
-FIREFOX BROWSER - mvn clean -Dtest=RunnersScenarioStepDefinition verify
+CHROME BROWSER - mvn clean test -DxmlTestSuite=TestNG.xml
+FIREFOX BROWSER - mvn clean test -DxmlTestSuite=TestNG.xml
 ```
 
 # Report
