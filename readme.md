@@ -4,7 +4,7 @@ Tools used: Intelij IDE, Chrome Browser (execution), Firefox Developer edition f
 
 
 # Description:
-This automation framework is build to automate the computer database assignment =.
+This automation framework is build to automate the computer database assignment.
 It follows the Page Object Model pattern and from the project structure you can see that the elementActions(validate,button,dropdown and input) are in a package that is called common under main folder 
 and also there is a Pages package present that is used to locate the elements and write the methods that are going to be used in the tests later.
 In the test folder we have 2 packages that are tests(BasePage that has the setup for starting the tests) and 
@@ -52,7 +52,7 @@ FIREFOX BROWSER - mvn clean test -DxmlTestSuite=TestNG.xml
 ```
 
 # Report
-Once the build has finished in the project structure under target folder a report will be created named report.html.
+Once the build has finished in the project structure under ExtendReports folder a report will be created named ExtendReportResults.html.
 Open the report in browser to review the results.
 Also a copy of generated report will be available in the zip folder.
 	
